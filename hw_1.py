@@ -27,14 +27,14 @@ print(valid_bank_card(bank_card))
 # -в теле мейла допустимы только символы “_” и “-”. Но они не могут быть первым символом мейла.
 # -символ “-” не может повторяться.
 def valid_email(email):
-    pattern = r'(^[a-z0-9][\w_]+.[\w_]+@[0-9A-Za-z]+\.[a-z]{2,4})'
+    pattern = r'(^[A-Za-z0-9]+.[\w_]+.[\w_]+@[0-9A-Za-z]+\.[a-z]{2,7})'
     result = re.findall(pattern, email)
     if result:
-        return 'Valid'
+        return 'Valid email'
     else:
-        return 'Invalid'
+        return 'Invalid email'
 
-email = 'hell_o2-_72@gmail.com'
+email = 'He-ll_o2-_72@gmail.com'
 print(valid_email(email))
 
 
